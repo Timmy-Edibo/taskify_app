@@ -35,47 +35,6 @@ class CustomUserSerializer(serializers.ModelSerializer):
         return user
 
 
-class CustomUserUpdateSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(read_only=True)
-
-    class Meta:
-        model = CustomUser
-        # exclude = ('groups', 'user_permissions', "client", "is_staff", "is_superuser", "date_joined", "role")
-        fields = [
-            "email",
-            "username",
-            "password",
-            "first_name",
-            "last_name",
-            "phone_number",
-            "address",
-        ]
-
-    def create(self, validated_data):
-        role = validated_data.get("role", "Passenger")
-        user = CustomUser.objects.create(
-            **validated_data, role=role, is_staff=False, is_superuser=False
-        )
-        return user
-
-
-class AdminCreateUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CustomUser
-        exclude = (
-            "groups",
-            "user_permissions",
-            "is_staff",
-            "is_superuser",
-            "date_joined",
-        )
-        # depth = 1
-
-    def create(self, validated_data):
-        user = CustomUser.objects.create(**validated_data)
-        return user
-
-
 class CustomUserResponseSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
