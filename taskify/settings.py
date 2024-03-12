@@ -15,7 +15,7 @@ SECRET_KEY = "django-insecure-%%(y2*&nf)1wpq8vm_*1&4k0!qplf&4)ch#^7_wmtsje@6d!3d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["taskify-app-qvp2.onrender.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["taskify-app-bpl1.onrender.com", "127.0.0.1"]
 
 # Application definition
 
@@ -167,10 +167,11 @@ SITE_ID = 1
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://taskify-app-qvp2.onrender.com",
-    "http://taskify-app-qvp2.onrender.com",
+    "https://taskify-app-bpl1.onrender.com",
+    "http://taskify-app-bpl1.onrender.com",
 
 ]
 
 CORS_ALLOW_HEADERS = ["*"]
 CORS_ALLOW_METHODS = ["*"]
+
