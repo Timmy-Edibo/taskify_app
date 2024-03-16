@@ -76,13 +76,13 @@
     }
 
     .project-task[value]::-webkit-progress-value {
-    border-radius: 10em;
-    background: var(--color-blue);
+      border-radius: 10em;
+      background: var(--color-blue);
     }
 
     .project-task[value]::-moz-progress-bar {
-    border-radius: 10em;
-    background: var(--color-blue);
+      border-radius: 10em;
+      background: var(--color-blue);
     }
   </style>
 </head>
@@ -121,7 +121,7 @@
       </g>
     </symbol>
   </svg>
-  <header class="wrapper p-5">
+  <header class="wrapper p-5 sticky top-0">
     <div class="flex justify-end">
       <div class="flex w-17/20 justify-between items-center">
         <div class="flex justify-between">
@@ -133,7 +133,7 @@
           <h1 class="text-2xl font-semibold">My Projects</h1>
         </div>
         <div class="flex w-4/5 mr-8 justify-end">
-          <div class="flex w-10/12 shadow-black mr-5 shadow-md p-4 py-3 rounded-3xl">
+          <div class="flex w-10/12 shadow-black mr-5 shadow-md p-4 py-3 rounded-3xl bg-white">
             <input type="search" name="search" class="w-full outline-none mr-2">
             <svg width="25" height="25">
               <use xlink:href="#search"></use>
@@ -152,84 +152,88 @@
   </header>
   <main>
     <div class="flex">
-      <div class="sidemenu w-3/20 flex-col justify-between">
-        <div class="mb-6">
-          <div class="home">
-            <ul>
-              <li class="flex justify-center mb-2">
-                <h3 class="flex items-center w-8/12 p-2 rounded-xl font-semibold">Home</h3>
-              </li>
-              <li class="flex justify-center mb-2">
-                <a href="project" class="nav-link active flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
-                  <svg width="20" height="20" class="">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span class="inline-block ml-4">Projects</span>
-                </a>
-              </li>
-              <li class="flex justify-center mb-2">
-                <a href="task" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
-                  <svg width="20" height="20" class="">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span class="inline-block ml-4">My Task</span>
-                </a></li>
-              <li class="flex justify-center mb-2">
-                <a href="" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
-                  <svg width="20" height="20" class="">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span class="inline-block ml-4">Team</span>
-                </a></li>
-              <li class="flex justify-center mb-2">
-                <a href="" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
-                  <svg width="20" height="20" class="">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span class="inline-block ml-4">File</span>
-                </a></li>
-              <li class="flex justify-center mb-2">
-                <a href="" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
-                  <svg width="20" height="20" class="">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span class="inline-block ml-4">Calendar</span>
-                </a></li>
-            </ul>
-          </div>
-          <div class="insights mt-10">
-            <ul>
-              <li class="flex justify-center mb-2">
-                <h3 class="flex items-center w-8/12 p-2 rounded-xl bg-gray-20 font-semibold">Insights</h3>
-              </li>
-              <li class="flex justify-center mb-2">
-                <a href="" class="nav-link flex justify-between items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
-                  <div class="flex items-center">
+      <div class="sidemenu w-3/20 fixed">
+        <div class="flex flex-col justify-between overflow-y-scroll h-screen">
+          <div class="mb-6">
+            <div class="home">
+              <ul>
+                <li class="flex justify-center mb-2">
+                  <h3 class="flex items-center w-8/12 p-2 rounded-xl font-semibold">Home</h3>
+                </li>
+                <li class="flex justify-center mb-2">
+                  <a href="project"
+                    class="nav-link active flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
                     <svg width="20" height="20" class="">
                       <use xlink:href="#edit"></use>
                     </svg>
-                    <span class="inline-block ml-4">Inbox</span>
+                    <span class="inline-block ml-4">Projects</span>
+                  </a>
+                </li>
+                <li class="flex justify-center mb-2">
+                  <a href="task" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
+                    <svg width="20" height="20" class="">
+                      <use xlink:href="#edit"></use>
+                    </svg>
+                    <span class="inline-block ml-4">My Task</span>
+                  </a></li>
+                <li class="flex justify-center mb-2">
+                  <a href="" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
+                    <svg width="20" height="20" class="">
+                      <use xlink:href="#edit"></use>
+                    </svg>
+                    <span class="inline-block ml-4">Team</span>
+                  </a></li>
+                <li class="flex justify-center mb-2">
+                  <a href="" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
+                    <svg width="20" height="20" class="">
+                      <use xlink:href="#edit"></use>
+                    </svg>
+                    <span class="inline-block ml-4">File</span>
+                  </a></li>
+                <li class="flex justify-center mb-2">
+                  <a href="" class="nav-link flex items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
+                    <svg width="20" height="20" class="">
+                      <use xlink:href="#edit"></use>
+                    </svg>
+                    <span class="inline-block ml-4">Calendar</span>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="insights mt-10">
+              <ul>
+                <li class="flex justify-center mb-2">
+                  <h3 class="flex items-center w-8/12 p-2 rounded-xl bg-gray-20 font-semibold">Insights</h3>
+                </li>
+                <li class="flex justify-center mb-2">
+                  <a href=""
+                    class="nav-link flex justify-between items-center w-9/12 p-2 pl-4 rounded-xl hover:bg-gray-200">
+                    <div class="flex items-center">
+                      <svg width="20" height="20" class="">
+                        <use xlink:href="#edit"></use>
+                      </svg>
+                      <span class="inline-block ml-4">Inbox</span>
+                    </div>
+                    <small class="count rounded-50 bg-red-400 text-white text-sm w-5 h-5">18</small>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="profile fixed bottom-0 w-[15%] bg-blue-50">
+            <ul>
+              <li class="flex justify-center itmes-center mb-2">
+                <div class="flex items-center w-8/12 p-2">
+                  <div class="flex justify-center align-center rounded-50 mr-3">
+                    <img src="images/placeholder.svg" alt="" width="45" class="rounded-50">
                   </div>
-                  <small class="count rounded-50 bg-red-400 text-white text-sm w-5 h-5">18</small>
-                </a>
+                  <h3 class="text-lg font-semibold">Profile</h3>
+                </div>
               </li>
             </ul>
           </div>
         </div>
-        <div class="profile mt-10">
-          <ul>
-            <li class="flex justify-center itmes-center mb-2">
-              <div class="flex items-center w-8/12 p-2">
-                <div class="flex justify-center align-center rounded-50 mr-3">
-                  <img src="images/placeholder.svg" alt="" width="45" class="rounded-50">
-                </div>
-                <h3 class="text-lg font-semibold">Profile</h3>
-              </div>
-            </li>
-          </ul>
-        </div>
       </div>
-      <div class="w-3/5">
+      <div class="w-3/5 ml-[15%] p-3">
         <div class="content w-full">
           <div class="flex justify-between items-center mb-4 w-full">
             <div class="flex">
@@ -237,13 +241,13 @@
                 <svg width="16" height="16" class="block">
                   <use xlink:href="#edit"></use>
                 </svg>
-                <span class="block">list</span>
+                <span class="block ml-3">list</span>
               </button>
               <button class="border px-14 py-3 flex items-center rounded-xl">
                 <svg width="16" height="16" class="block">
                   <use xlink:href="#edit"></use>
                 </svg>
-                <span class="block">board</span>
+                <span class="block ml-3">board</span>
               </button>
             </div>
             <div>
@@ -262,141 +266,154 @@
           </div>
         </div>
       </div>
-      <aside class="w-1/4 p-3">
-        <div class="flex justify-between">
-          <h2 class="text-lg font-semibold mb-3">Upcoming Meeting</h2>
-          <a href="" class="inline-block text-blue-500">See all</a>
-        </div>
-        <div class="flex flex-col rounded-xl bg-green-200 p-2 mb-4">
-          <div class="flex flex-col mb-4">
-            <h3 class="font-semibold">Meeting Name</h3>
-            <p>The meeting aims to identify areas for improvement and ensure the design aligns with user needs and
-              business goals</p>
+      <aside class="w-1/4 p-3 fixed right-0">
+        <div class="overflow-y-scroll h-100 h-screen">
+          <div class="flex justify-between">
+            <h2 class="text-lg font-semibold mb-3">Upcoming Meeting</h2>
+            <a href="" class="inline-block text-blue-500">See all</a>
           </div>
-          <div class="rounded-xl bg-gray-50 p-4">
-            <div class="flex justify-between mb-4">
-              <div class="flex flex-col">
-                <h5>Time</h5>
-                <p class="font-semibold">12:00-12:30</p>
-              </div>
-              <div class="flex flex-col">
-                <h5>Duration</h5>
-                <p class="font-semibold">30 min</p>
-              </div>
+          <div class="flex flex-col rounded-xl bg-green-200 p-2 mb-4">
+            <div class="flex flex-col mb-4">
+              <h3 class="font-semibold">Meeting Name</h3>
+              <p>The meeting aims to identify areas for improvement and ensure the design aligns with user needs and
+                business goals</p>
             </div>
-            <div class="flex justify-between mb-6">
-              <h5>Invited member</h5>
-            </div>
-            <div class="flex mb-10">
-              <div class="rounded-50">
-                <img src="images/placeholder.svg" alt="" width="40" class="rounded-50">
-              </div>
-              <div class="rounded-50 ml-[-6px]">
-                <img src="images/placeholder.svg" alt="" width="40" class="rounded-50">
-              </div>
-              <div class="rounded-50 ml-[-6px]">
-                <img src="images/placeholder.svg" alt="" width="40" class="rounded-50">
-              </div>
-              <div class="flex justify-center items-center rounded-50 bg-red-200 w-10 h-10 ml-[-6px]">
-                <p>+3</p>
-              </div>
-            </div>
-            <div class="flex justify-center p-3">
-              <button class="rounded-lg bg-blue-400 hover:bg-blue-100 w-4/5 p-3 fs-4 text-white hover:text-black">Join
-                Meeting</button>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <h3 class="text-lg font-semibold mb-3">Upcoming Task</h3>
-          <div>
-            <div class="shadow-black shadow-lg p-3 pr-7 rounded-lg relative mb-6">
+            <div class="rounded-xl bg-gray-50 p-4">
               <div class="flex justify-between mb-4">
-                <h6>Product Plan</h6>
-                <div>
-                  <button class="bg-orange-50 text-orange-400 px-2 rounded-xl">urgent</button>
-                  <button class="absolute right-0">
-                    <svg width="16" height="16" class="">
+                <div class="flex flex-col">
+                  <h5>Time</h5>
+                  <p class="font-semibold">12:00-12:30</p>
+                </div>
+                <div class="flex flex-col">
+                  <h5>Duration</h5>
+                  <p class="font-semibold">30 min</p>
+                </div>
+              </div>
+              <div class="flex justify-between mb-6">
+                <h5>Invited member</h5>
+              </div>
+              <div class="flex mb-10">
+                <div class="rounded-50">
+                  <img src="images/placeholder.svg" alt="" width="40" class="rounded-50">
+                </div>
+                <div class="rounded-50 ml-[-6px]">
+                  <img src="images/placeholder.svg" alt="" width="40" class="rounded-50">
+                </div>
+                <div class="rounded-50 ml-[-6px]">
+                  <img src="images/placeholder.svg" alt="" width="40" class="rounded-50">
+                </div>
+                <div class="flex justify-center items-center rounded-50 bg-red-200 w-10 h-10 ml-[-6px]">
+                  <p>+3</p>
+                </div>
+              </div>
+              <div class="flex justify-center p-3">
+                <button class="rounded-lg bg-blue-400 hover:bg-blue-100 w-4/5 p-3 fs-4 text-white hover:text-black">Join
+                  Meeting</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-lg font-semibold mb-3">Upcoming Task</h3>
+            <div>
+              <div class="shadow-black shadow-lg p-3 pr-7 rounded-lg relative mb-6">
+                <div class="flex justify-between mb-4">
+                  <h6>Product Plan</h6>
+                  <div>
+                    <button class="bg-orange-50 text-orange-400 px-2 rounded-xl">urgent</button>
+                    <button class="absolute right-0">
+                      <svg width="16" height="16" class="">
+                        <use xlink:href="#edit"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="rounded-50">
+                    <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
+                  </div>
+                  <div class="rounded-50 ml-[-2px]">
+                    <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
+                  </div>
+                  <div class="rounded-50 ml-[-2px]">
+                    <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                  <progress value="25" max="100" class="upcoming-task h-1.5">
+                    <div pseudo="-webkit-progress-inner-element">
+                      <div pseudo="-webkit-progress-bar">
+                        <div pseudo="-webkit-progress-value"></div>
+                      </div>
+                    </div>
+                  </progress>
+                  <p class="flex items-center">
+                    <svg width="16" height="16" class="inline-block">
                       <use xlink:href="#edit"></use>
                     </svg>
-                  </button>
+                    <span>10:00-11:00</span>
+                  </p>
                 </div>
+                <small class="text-sm">Management</small>
               </div>
-              <div class="flex">
-                <div class="rounded-50">
-                  <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
-                </div>
-                <div class="rounded-50 ml-[-2px]">
-                  <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
-                </div>
-                <div class="rounded-50 ml-[-2px]">
-                  <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
-                </div>
-              </div>
-              <div class="flex justify-between items-center mb-4">
-                <progress value="25" max="100" class="upcoming-task h-1.5">
-                  <div pseudo="-webkit-progress-inner-element">
-                    <div pseudo="-webkit-progress-bar">
-                      <div pseudo="-webkit-progress-value"></div>
-                    </div>
+              <div class="shadow-black shadow-lg p-3 pr-7 rounded-lg relative mb-6">
+                <div class="flex justify-between mb-4">
+                  <h6>Product Plan</h6>
+                  <div>
+                    <button class="bg-orange-50 text-orange-400 px-2 rounded-xl">urgent</button>
+                    <button class="absolute right-0">
+                      <svg width="16" height="16" class="">
+                        <use xlink:href="#edit"></use>
+                      </svg>
+                    </button>
                   </div>
-                </progress>
-                <p class="flex items-center">
-                  <svg width="16" height="16" class="inline-block">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span>10:00-11:00</span>
-                </p>
-              </div>
-              <small class="text-sm">Management</small>
-            </div>
-            <div class="shadow-black shadow-lg p-3 pr-7 rounded-lg relative mb-6">
-              <div class="flex justify-between mb-4">
-                <h6>Product Plan</h6>
-                <div>
-                  <button class="bg-orange-50 text-orange-400 px-2 rounded-xl">urgent</button>
-                  <button class="absolute right-0">
-                    <svg width="16" height="16" class="">
+                </div>
+                <div class="flex">
+                  <div class="rounded-50">
+                    <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
+                  </div>
+                  <div class="rounded-50 ml-[-2px]">
+                    <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
+                  </div>
+                  <div class="rounded-50 ml-[-2px]">
+                    <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                  <progress value="25" max="100" class="upcoming-task h-1.5">
+                    <div pseudo="-webkit-progress-inner-element">
+                      <div pseudo="-webkit-progress-bar">
+                        <div pseudo="-webkit-progress-value"></div>
+                      </div>
+                    </div>
+                  </progress>
+                  <p class="flex items-center">
+                    <svg width="16" height="16" class="inline-block">
                       <use xlink:href="#edit"></use>
                     </svg>
-                  </button>
+                    <span>10:00-11:00</span>
+                  </p>
                 </div>
+                <small class="text-sm">Management</small>
               </div>
-              <div class="flex">
-                <div class="rounded-50">
-                  <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
-                </div>
-                <div class="rounded-50 ml-[-2px]">
-                  <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
-                </div>
-                <div class="rounded-50 ml-[-2px]">
-                  <img src="images/placeholder.svg" alt="" width="25" class="rounded-50">
-                </div>
-              </div>
-              <div class="flex justify-between items-center mb-4">
-                <progress value="25" max="100" class="upcoming-task h-1.5">
-                  <div pseudo="-webkit-progress-inner-element">
-                    <div pseudo="-webkit-progress-bar">
-                      <div pseudo="-webkit-progress-value"></div>
-                    </div>
-                  </div>
-                </progress>
-                <p class="flex items-center">
-                  <svg width="16" height="16" class="inline-block">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span>10:00-11:00</span>
-                </p>
-              </div>
-              <small class="text-sm">Management</small>
             </div>
           </div>
         </div>
-    </aside>
+      </aside>
     </div>
   </main>
   <script class="dependency" src="taskify.bundle.js"></script>
   <script class="dependency" src="js/jquery.min.js"></script>
+  <script class="dependency">
+    $(window).on('scroll', (e) => {
+      const isSticky = $('header')[0].offsetTop > 0;
+
+      if (isSticky ) {
+        $('header').addClass(['bg-gray-100', 'shadow-black', 'shadow-lg']);
+      } else {
+        $('header').removeClass(['bg-gray-100', 'shadow-black', 'shadow-lg']);
+      }
+    });
+  </script>
 </body>
 
 </html>

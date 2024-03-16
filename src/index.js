@@ -17,6 +17,8 @@ $('a').on('click', function (e) {
   $(this).addClass('active');
   let pageRef = $(this).attr('href');
 
+  console.log(pages.get(pageRef));
+
   $('script:not(".dependency")').remove()
 
   initializePage(pages.get(pageRef));
@@ -32,9 +34,7 @@ function initializePage(htmlString) {
 
   $('#content').html(content);
 
-  if ($('script:not(".dependency")').length > 0) {
-    return;
-  }
+  console.log('Here sha', htmlString);
 
   document.body.onload = () => {
     $('body').append(`<script>
